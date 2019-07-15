@@ -25,7 +25,7 @@ SECRET_KEY = 'i6+$^9f^)2+-q!6^)8(pi-a=*e(x6^^#p(r)cxos=r5s$3@96k'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
