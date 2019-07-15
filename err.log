@@ -1,0 +1,24 @@
+[2019-07-16 00:48:24 +0300] [617] [INFO] Starting gunicorn 19.9.0
+[2019-07-16 00:48:24 +0300] [617] [INFO] Listening at: http://0.0.0.0:8000 (617)
+[2019-07-16 00:48:24 +0300] [617] [INFO] Using worker: sync
+[2019-07-16 00:48:24 +0300] [620] [INFO] Booting worker with pid: 620
+[2019-07-16 00:48:24 +0300] [620] [ERROR] Exception in worker process
+Traceback (most recent call last):
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/arbiter.py", line 583, in spawn_worker
+    worker.init_process()
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 129, in init_process
+    self.load_wsgi()
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/workers/base.py", line 138, in load_wsgi
+    self.wsgi = self.app.wsgi()
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/app/base.py", line 67, in wsgi
+    self.callable = self.load()
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 52, in load
+    return self.load_wsgiapp()
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/app/wsgiapp.py", line 41, in load_wsgiapp
+    return util.import_app(self.app_uri)
+  File "/home/box/.local/lib/python3.6/site-packages/gunicorn/util.py", line 350, in import_app
+    __import__(module)
+ModuleNotFoundError: No module named 'ask.wsgi'
+[2019-07-16 00:48:24 +0300] [620] [INFO] Worker exiting (pid: 620)
+[2019-07-16 00:48:24 +0300] [617] [INFO] Shutting down: Master
+[2019-07-16 00:48:24 +0300] [617] [INFO] Reason: Worker failed to boot.
