@@ -16,4 +16,7 @@ Including another URLconf
 from django.conf.urls import url
 from qa.views import test
 
-urlpatterns = [ url(r'^', test), ]﻿
+urlpatterns = [
+    url(r'^', include("qa.urls")),
+    url(r'^admin/', admin.site.urls),
+]
